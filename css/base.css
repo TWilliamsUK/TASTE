@@ -1,0 +1,274 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+body, input, textarea {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	font-size: .8rem;
+	color: #3a3a3a;
+	margin: 0;
+	letter-spacing: .125rem;
+	line-height: 2;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 1em;
+}
+p {
+	margin-top: 0;
+	margin-bottom: .8em;
+}
+
+h1,
+h2, 
+h3 {
+	text-transform: uppercase;
+}
+
+h1,
+h2 {
+	font-weight: 300;
+	margin-top: 0;
+}
+
+h2 {
+	font-size: 1.25em;
+}
+
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+::selection {
+    background-color: rgba(58, 58, 58, 1); !important;
+    color: #fff;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+
+.name {
+	font-size: 1.35em;
+	margin: 5px;
+}
+
+.menu {
+	padding-top: 1.5em;
+	height: 5em;
+}
+
+.name a,
+.menu a {
+	text-align: center;
+	display: block;
+}
+.menu a {
+	font-size: .95em;
+	color: #3a3a3a;
+	text-transform: uppercase;
+}
+
+.down {
+	font-size: 1.3em;
+}
+
+
+
+
+ /* Parallax */
+
+.parallax-top {
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 50vh;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+
+.parallax-bottom {
+	background: #3a3a3a url(../imgs/5888574370_8faa207f61_o.jpg) center center no-repeat;
+	background-size: cover;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	z-index: -100;
+	margin-top: -8vh;
+}
+
+
+
+/* --- Sliding Underline --- */
+
+li {
+display: inline-block;
+}
+
+.sliding-u-l-r:after {
+content: '';
+display: block;
+height: 1px;
+width: 0;
+background: transparent;
+transition: width .5s ease, background-color .5s ease;
+}
+
+.sliding-u-l-r:hover:after {
+width: 100%;
+background: #3a3a3a;
+}
+
+.space {
+	padding: 0 20px; /* ---- Required to prevent underline between menu items ---- */
+}
+
+/* ---- Layout Containers ---- */
+
+.wrapper {
+	position: relative;
+	top: 92vh;
+	padding: 10em 2.5em 2.5em 2.5em;
+    z-index: -1;
+    background: url("../imgs/paper.png");
+    background-color: #fff;
+    border-top: solid 1px #3a3a3a;
+    z-index: 5;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	z-index: 9999;
+	background: url("../imgs/paper.png");
+    background-color: #fff;
+    border-bottom: solid 1px #3a3a3a;
+}
+.banner,
+.main-footer {
+	text-align: center;
+}
+.banner {
+	color: #fff;
+	background: #3a3a3a;
+	padding: 3.2em 0;
+	margin-bottom: 48px;
+}
+
+.col {
+	display: block;
+	float: left;
+	width: 50%
+}
+
+/* Interim Class — Fix Borderbox/Flexbox issue */
+.tight {
+	padding: 5em;
+}
+
+.main-footer {
+	padding: 2em 0;
+	margin-top: 30px;
+	background: url("../imgs/paper.png");
+    background-color: #fff;
+}
+
+.main-footer img {
+	margin-bottom: 20px;
+}
+
+/* ---- Page Elements ---- */
+
+.logo {
+	width: 190px;
+}
+.headline {
+	margin-bottom: 0;
+}
+.feat-img {
+	border-radius: 5px;
+}
+
+
+
+/* ---- Image Blend Modes ---- */
+
+.multiply {
+  background-blend-mode: multiply;
+  background-size: cover;
+}
+
+.img1 {
+  background-image: url(../imgs/taste_chefs.jpg), url("../imgs/paper.png");
+  background-position: right top;
+}
+  
+.img2 {
+  background-image: url(../imgs/chefs.png), url("../imgs/paper.png");
+  background-position: center top;
+}
+
+
+/* ---- Drop Shadow ---- */
+img.shadow {
+    -webkit-filter: drop-shadow( 0 0 50px #3a3a3a );
+            filter: drop-shadow( 0 0 50px #3a3a3a ); /* Same syntax as box-shadow */
+}
+
+
+/* ---- Google Map ---- */
+#map {
+        width: 100%;
+        height: 60vh;
+      }
+
+/* ---- Fix anchor points with fixed nav bar ---- */
+:target:before {
+content:"";
+display:block;
+height: 3rem; /* fixed header height*/
+margin: 3rem 0 0; /* negative fixed header height */
+}
+
+
+
+/* ---- Animate content as scroll ---- */
+#r-slide.start {
+  transform: translateX(150px);
+  animation: r-slide 1s ease forwards;
+}
+
+@keyframes r-slide {
+  to { transform: translateX(0); }
+}
+
+#l-slide.start {
+  transform: translateX(-150px);
+  animation: l-slide 1s ease forwards;
+}
+
+@keyframes l-slide {
+  to { transform: translateX(0); }
+}
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+
+
+
+

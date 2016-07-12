@@ -1,0 +1,97 @@
+#contact-area {
+	width: 100%;
+	margin-top: 25px;
+}
+
+#contact-area input, #contact-area textarea {
+	padding: 8px 15px;
+	width: 80%;
+	margin: 0px 0px 10px 0px;
+	border: 1px solid #3a3a3a;
+	background: none;
+}
+
+#contact-area input {
+	height: 40px;
+}
+
+#contact-area textarea {
+	height: 250px;
+	max-height: 450px;
+	resize:vertical;
+}
+
+#contact-area input.submit-button {
+	width: 150px;
+	height: 40px;
+	float: right;
+	background: none;
+	margin-top: 10px;
+}
+
+#contact-area input.submit-button:hover {
+	background: #3a3a3a;
+	color: #fff;
+	transition: .2s;
+}
+
+#contact-area label {
+	float: left;
+	text-align: right;
+	padding-right: 15px;
+	width: 20%;
+	padding-top: 8px;
+}
+
+/* remove active highlighting */
+:focus {
+    outline-color: transparent;
+    outline-style: none;
+  }
+
+
+
+  /* ================================= 
+  Media Queries
+==================================== */
+
+
+
+@media (max-width: 769px) {
+
+
+	#contact-area label, #contact-area input, #contact-area textarea {
+		display: block;
+		float: left;
+		text-align: left;
+		clear: both;
+		width: 100%;
+	}
+
+	
+	#contact-area input {
+		/* larger inputs for mobile */
+		height: 4em;
+	}
+
+	#contact-area input.submit-button {
+		width: 100%;
+		text-align: center;
+		background: #3a3a3a;
+		color: #fff;
+		/* larger button for mobile */
+		height: 4em;
+	}
+
+	#contact-area input.submit-button:hover,
+	/* Add active state for click on mobile */ 
+	#contact-area input.submit-button:active {
+		background: #000;
+		transition: none;
+	}
+
+	#contact-area label {
+		padding: .5em 0;
+	}
+
+}

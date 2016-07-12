@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taste</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/flexbox.css">
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/inview.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"async defer></script>
+
+</head>
+
+<body>
+
+    <header> 
+
+        <div class="menu-btn">
+            MENU <span class="down">&#9662;</span>
+        </div> 
+
+        <ul class="menu">
+            <li class="sliding-u-l-r"><a href="#welcome">Welcome</a></li>
+            <li class="space"></li>
+            <li class="sliding-u-l-r"><a href="#booking">Booking</a></li>
+            <li class="space"></li>
+            <li class="sliding-u-l-r"><a href="#where">Where to find us</a></li>
+            <li class="space"></li>
+            <li class="sliding-u-l-r"><a href="#contact">Contact</a></li>
+        </ul>
+
+        
+
+    </header>
+
+
+
+
+    <div class="main-wrapper">
+
+<!--PARALLAX BACKGROUND LAYER-->
+
+        
+
+            
+        <div class="parallax-bottom"></div>
+        
+
+        
+        <div class="parallax-top">
+            <img src="imgs/taste.svg" alt="Taste Logo" class="shadow">
+        </div>
+    
+
+
+<!-- BASE LAYER -->
+
+        <div class="wrapper">
+             
+            <a name="welcome"></a>  <!-- Fixed Header Anchor Fix - Not ideal --> 
+
+            <div class="row">
+
+                <!-- 1st Column -->
+
+                <div class="col" id="l-slide">
+
+                    <!-- Flexbox not accepting border box property when tight class applied to Flexitem? -->
+
+                    <div class="tight">
+                        <h2>Welcome!</h2>
+                        <p>Taste restaurant is open to the public during term-time, Monday to Friday. All dishes are freshly prepared by our highly skilled hospitality and catering students, giving you the opportunity to sample food prepared by the next generation of star chefs and hospitality professionals.</p>
+                        <p>Our facilities are of the highest quality, and have been tried and tested by some of the best! Top chefs and celebrities including Brian Turner, Mark Hix, Jamie Oliver, Atul Kochar and Gordon Ramsay have all used our kitchens in recent years. We recently hosted the BCA Chef of the Year Competition.</p>
+                    </div>
+
+                </div>
+                
+                <!-- 2nd Column -->
+
+                <div class="col multiply img1"></div>
+
+            </div>
+            
+
+            <a name="booking"></a>
+            <div class="row">       
+                
+                <div class="col" id="r-slide">
+                    <div class="tight">
+                        <h2>Booking</h2>
+                        
+                        <p>Our new restaurant seats 70 and is open 7 days a week. We fill up fast so to avoid dissapointment we recommend booking early.</p> 
+                        <p>Booking a table online is easy and takes just a couple of minutes. Please let us know your party size and the date and time you require by filling out the form below.</p>
+                        <p>We also offer catering for private events. For larger groups we do suggest booking atleast four weeks prior to your desired date though we'll always do our best to accomodate you, even at shorter notice.</p>
+
+                    </div>
+                </div>
+
+                <div class="col multiply img2">
+                </div>
+
+            </div>
+            
+
+            <a name="where"></a>
+
+            <div class="row">
+
+                <div class="col">
+                    <div class="tight">
+
+                        <h2>Where to find us</h2>
+
+                        <p>As the largest of our College campuses, Hammersmith campus has even more excellent facilities to offer our students, for both academic and recreational purpose, than you would expect.</p>
+
+                        <p>Underground (Zone 2):</br>
+                        Barons Court for Piccadilly and District Lines.</p>
+
+                        <p>Overground:</br>
+                        Kensington Olympia.</p>
+
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div id="map"></div>
+                </div>
+
+            </div>
+            
+
+            <a name="contact"></a>
+
+            <div class="row" name="contact">
+
+                <div class="col">
+                    <div class="tight">
+                        <h2>Contact</h2>
+                        <p>For table reservations and venue hire you can contact us via this form.  We'll get right back to you to confirm.</p>
+
+                        <p>Or alternatively if you'd prefer, you can also call <a href="tel:02075651350">020 7565 1350</a> or email <a href="mailto:taste@wlc.ac.uk">taste@wlc.ac.uk</a>.</p>
+
+                        <h2>open</h2>
+                        <p>Monday&mdash;Sunday</br>
+                        12:00&mdash;14:00, 18:00&mdash;21:30
+                    </div>
+                </div>
+
+                <div class="col" id="contact-area">
+                    <form method="post" action="contactengine.php">
+                        <label for="Name">Name</label>
+                        <input type="text" name="Name" id="Name" />
+            
+                        <label for="Email">Email</label>
+                        <input type="text" name="Email" id="Email" />
+                        
+                        <label for="Message">Message</label><br />
+                        <textarea name="Message" rows="20" cols="20" id="Message"></textarea>
+
+                        <input type="submit" name="submit" value="Submit" class="submit-button" />
+                    </form>
+                </div>
+    
+            </div>
+            
+
+            
+
+            <footer class="main-footer">
+
+                <img src="imgs/taste_blk.svg" alt="Taste Logo">
+                </br>
+                &copy; 
+                <script type="text/javascript"> document.write(new Date().getFullYear());</script> TASTE Restaurant
+                
+            </footer>
+
+
+        </div>
+
+
+
+
+        <script>
+
+        //******** Responsive Menu
+
+            jQuery(function($){
+                 $('.menu-btn').click(function(){
+                 $('.menu').toggleClass('expand')
+                 })
+            })
+
+        </script>
+
+
+        <script>
+
+
+        //******** Map
+        
+            function initMap() {
+
+                var myLatLng = {lat: 51.4913352, lng: -0.2143513};
+
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 15,
+                    center: myLatLng
+                });
+
+                var marker = new google.maps.Marker({
+                    position: myLatLng,
+                    map: map,
+                    icon: 'imgs/taste_map_marker.png',
+                    title: 'Hello World!'
+                });
+
+                var styles = [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":100},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}];
+
+                    map.setOptions({styles: styles}),
+
+                    // Disable the scroll wheel by default
+                    map.setOptions({ scrollwheel: false });
+ 
+
+            }
+
+        </script>
+        
+
+        <script>
+
+        //******** Animate content on Scroll
+
+        $(window).load(function () {
+            var in_view = new Waypoint.Inview({
+                element: $('#r-slide')[0],
+                enter: function() {
+                    $('#r-slide').addClass('start');
+                }
+            });  
+            var in_view = new Waypoint.Inview({
+                element: $('#l-slide')[0],
+                enter: function() {
+                    $('#l-slide').addClass('start');
+                }
+        //        exit: function() {  // optionally
+        //           $('#r-slide').removeClass('start');
+        //       }
+            });
+        });
+
+        </script>
+
+
+        <script>
+
+        //******** Parallax
+
+        $(window).scroll(function(e){
+          parallax();
+        });
+        function parallax(){
+          var scrolled = $(window).scrollTop();
+          $('.parallax-bottom').css('top',-(scrolled*0.2)+'px');
+        }
+                
+        </script>
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+</body>
+</html>
