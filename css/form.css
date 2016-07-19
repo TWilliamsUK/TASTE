@@ -1,3 +1,8 @@
+
+
+/* Form ------------------------------ */
+
+
 #contact-area {
 	width: 100%;
 	margin-top: 25px;
@@ -45,20 +50,16 @@
 
 /* remove active highlighting */
 :focus {
-    outline-color: transparent;
-    outline-style: none;
-  }
+  outline-color: transparent;
+  outline-style: none;
+}
 
 
 
-  /* ================================= 
-  Media Queries
-==================================== */
-
+/* Media Queries ------------------------------ */
 
 
 @media (max-width: 769px) {
-
 
 	#contact-area label, #contact-area input, #contact-area textarea {
 		display: block;
@@ -68,7 +69,6 @@
 		width: 100%;
 	}
 
-	
 	#contact-area input {
 		/* larger inputs for mobile */
 		height: 4em;
