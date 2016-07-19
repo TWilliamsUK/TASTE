@@ -1,10 +1,22 @@
-/* ================================= 
-  Base Element Styles
-==================================== */
+
+/* --------------------------------------------------------------
+
+    Author: Tom Williams
+    URL: http://tomwillia.ms
+
+    Project Name: TASTE
+    Version: 1.0
+    URL: —
+
+   -------------------------------------------------------------- */
+
+
+/* ---------- Global Element Styles---------- */
 
 * {
 	box-sizing: border-box;
 }
+
 body, input, textarea {
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
@@ -14,12 +26,14 @@ body, input, textarea {
 	letter-spacing: .125rem;
 	line-height: 2;
 }
+
 ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	font-size: 1em;
 }
+
 p {
 	margin-top: 0;
 	margin-bottom: .8em;
@@ -100,7 +114,7 @@ a {
 
 
 .parallax-bottom {
-	background: #3a3a3a url(../imgs/5888574370_8faa207f61_o.jpg) center center no-repeat;
+	background: #3a3a3a url(../imgs/taste_food_cover.jpg) center center no-repeat;
 	background-size: cover;
 	position: fixed;
 	width: 100%;
@@ -211,12 +225,12 @@ header {
 }
 
 .img1 {
-  background-image: url(../imgs/taste_chefs.jpg), url("../imgs/paper.png");
+  background-image: url(../imgs/taste_chefs.png), url("../imgs/paper.png");
   background-position: right top;
 }
   
 .img2 {
-  background-image: url(../imgs/chefs.png), url("../imgs/paper.png");
+  background-image: url(../imgs/taste_kitchen.png), url("../imgs/paper.png");
   background-position: center top;
 }
 
